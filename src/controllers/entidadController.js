@@ -7,8 +7,8 @@ export const getAllEntidades = async (req, res) => {
         res.json(data)
 
     } catch (error) {
-        console.log('Error en la consulta de Entidads a la base de datos:', error);
-        res.status(500).json({ message: 'Error al obtener los Entidads' });
+        console.log('Error en la consulta de Entidades a la base de datos:', error);
+        res.status(500).json({ message: 'Error al obtener los Entidades' });
     }
 };
 
@@ -19,7 +19,7 @@ export const getEntidadID = async (req, res) => {
         res.json(entidad);
 
     } catch (error) {
-        console.log('Error en la consulta de Entidads a la base de datos:', error);
+        console.log('Error en la consulta de Entidades a la base de datos:', error);
         res.status(500).json({ message: 'Error al editar un Entidad' });
     }
 }
@@ -40,7 +40,7 @@ export const createEntidad = async (req, res) => {
         res.send(newEntidad._id)
 
     } catch (error) {
-        console.log('Error en la consulta de Entidads a la base de datos:', error);
+        console.log('Error en la consulta de Entidades a la base de datos:', error);
         res.status(500).json({ message: 'Error al crear un Entidad' });
     }
 }
@@ -59,7 +59,7 @@ export const editEntidad = async (req, res) => {
         res.json(updatedUser);
 
     } catch (error) {
-        console.log('Error en la consulta de Entidads a la base de datos:', error);
+        console.log('Error en la consulta de Entidades a la base de datos:', error);
         res.status(500).json({ message: 'Error al editar un Entidad' });
     }
 }
@@ -78,7 +78,7 @@ export const deleteEntidad = async (req, res) => {
         res.send("borrado")
 
     } catch (error) {
-        console.log('Error en la consulta de Entidads a la base de datos:', error);
+        console.log('Error en la consulta de Entidades a la base de datos:', error);
         res.status(500).json({ message: 'Error al editar un Entidad' });
     }
 }
