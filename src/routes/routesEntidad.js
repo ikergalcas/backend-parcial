@@ -18,9 +18,9 @@ routerEntidad.get('/conexion/:tokenId/:token',verificarConexion)
 
 const fileUpload = multer();
 cloudinary.config({
-    cloud_name: 'dten77l85',
-    api_key: '829615256525372',
-    api_secret: 'Km6kFadj1HOmPf6mYYyyd6KIMeQ'
+    cloud_name: 'dsvcyziih',
+    api_key: '493129683699242',
+    api_secret: '0fXxQE3JUjwcuJBSRRCqJ_HLqvM'
 });
 
 routerEntidad.post('/subirFoto', fileUpload.single('foto'), function (req, res, next) {
