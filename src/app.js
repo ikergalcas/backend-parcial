@@ -13,6 +13,5 @@ app.use(morgan('dev'))
 app.use('/paradas/', routerParada)
 app.use('/entidades/', routerEntidad)
 app.use('/', routerLogin)
-app.use('/', routerUsuarios)
 
 export default app;
