@@ -3,6 +3,7 @@ import morgan from 'morgan'
 import routerParada from './routes/routesParada.js'
 import routerEntidad from './routes/routesEntidad.js'
 import routerLogin from './routes/routesLogin.js'
+import routerEvento from './routes/routesEvento.js'
 import cors from 'cors'
 
 const app = express()
@@ -11,6 +12,7 @@ app.use(cors())
 app.use(morgan('dev'))
 app.use('/paradas/', routerParada)
 app.use('/entidades/', routerEntidad)
+app.use('/eventos/', routerEvento)
 app.use('/', routerLogin)
 
 export default app;
