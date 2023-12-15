@@ -3,7 +3,6 @@ import morgan from 'morgan'
 import routerParada from './routes/routesParada.js'
 import routerEntidad from './routes/routesEntidad.js'
 import routerLogin from './routes/routesLogin.js'
-import routerUsuarios from './routes/routesUsuario.js'
 import cors from 'cors'
 
 const app = express()
