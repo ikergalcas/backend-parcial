@@ -1,8 +1,10 @@
 import mongoose from 'mongoose' 
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://useradmin3:adminadmin@ingweb.xdloocr.mongodb.net/Parcial3')
+        await mongoose.connect(process.env.MONGO_URI)
         console.log("Conexión establecida")        
     } catch (error) {
         console.log(error)

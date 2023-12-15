@@ -2,6 +2,8 @@ import express from 'express'
 import multer from 'multer'
 import cloudinary from 'cloudinary'
 import streamifier from 'streamifier'
+import dotenv from 'dotenv'
+dotenv.config()
 
 import { getAllEntidades,getEntidadID, createEntidad, editEntidad, deleteEntidad} from "../controllers/entidadController.js"
 import {verificarTokenGoogle,verificarConexion} from "../controllers/GoogleLogin.js"
@@ -18,9 +20,9 @@ routerEntidad.get('/conexion/:tokenId/:token',verificarConexion)
 
 const fileUpload = multer();
 cloudinary.config({
-    cloud_name: 'dsvcyziih',
-    api_key: '493129683699242',
-    api_secret: '0fXxQE3JUjwcuJBSRRCqJ_HLqvM'
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_KEY,
+    api_secret: process.env.CLOUD_SECRET
 });
 
 routerEntidad.post('/subirFoto', fileUpload.single('foto'), function (req, res, next) {
