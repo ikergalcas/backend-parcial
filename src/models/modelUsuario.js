@@ -3,16 +3,20 @@ import mongoose from 'mongoose'
 const entitySchema = new mongoose.Schema({
     foto: {
         type: String,
-        default: "http://res.cloudinary.com/dten77l85/image/upload/v1701645989/hfxempzbqlkawdekvuxy.jpg"
+        default: "http://res.cloudinary.com/dsvcyziih/image/upload/v1702631668/ecoaffylh8jxxumqbhki.webp"
     },
     correo: {
-        type:String  
+        type:String,
+        unique: true
     },
     ubicacion: {
+        type: String
+    },
+    nombre: {
         type: String
     }
 
 
 },{ versionKey: false });
 
-export default mongoose.model('entidades', entitySchema)
+export default mongoose.model('usuarios', entitySchema)
